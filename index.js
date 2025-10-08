@@ -30,7 +30,7 @@ async function handleEvent(event) {
   }
 
   try {
-    const model = genAI.getGenerativeModel({ model: "gemini-pro"});
+    const model = genAI.getGenerativeModel({ model: "gemini-1.5-pro-latest"});
     const result = await model.generateContent(event.message.text);
     const response = await result.response;
     const aiReply = response.text();
